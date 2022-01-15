@@ -1,0 +1,52 @@
+.about-content{
+    overflow: hidden;
+}
+.about-items{
+    width: 30%;
+    text-align: center;
+    float: left;
+    border: solid 2px rgba(197, 197, 197, 0.533);
+    padding: 50px 20px;
+    margin-bottom:20px
+}
+.about-items.mg{
+    margin: 0 5%;
+}
+.about-item-title{
+    text-transform: capitalize;
+   
+}
+.about-item-desc{
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666666;
+
+}
+.about-item-link{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: royalblue;
+}
+.ltr-effect{
+    position: relative;
+}
+.about-items:after{
+    position: absolute;
+    content: "";
+    width: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    z-index: -1;
+    transition: width 0.5s;
+
+}
+.about-items:hover:after{
+    width: 100%;
+}
+.about-items:hover .about-item-title{
+
+    color: white;
+}

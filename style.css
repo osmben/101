@@ -1,0 +1,876 @@
+/* 
+fahras
+    1-common styles
+    2-general styles
+    3-sections styles
+        3.0 header section
+        3.1 home section
+        3.2 About Section
+        3.3 Portfolio section
+        3.4 service section
+        3.5 team section
+        3.6 blog section
+        3.7 contact section
+        3.8 footer section
+*/
+
+
+
+
+
+/*common*/
+/*
+    -put all the web in container
+    -opacity hover
+    -section title
+    -section padding
+    -hover effect 1( left to right)
+    home-hover effect 2 (top to bottom)
+*/
+/* 2- general styles*/
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* this root is such tag of HTML */
+:root{
+    --mainColor : royalblue;
+    --colorWhite:#fff;
+    --grayColor:#999;
+    --bg-black :#000;
+    --colorWhite:#fff;
+
+
+}
+.container{
+    width: 80%;
+   margin: auto;
+
+}
+.clear{
+    clear: both;
+}
+
+
+.header-content{
+  /* overflow: hidden;like this you can solve float problome*/
+}
+
+
+/* here the general styles is end */
+/* header section is started*/
+.header{
+    position: fixed; /*this change display:block to inline-block*/
+    width: 100%;
+    z-index: 10;
+
+   
+}
+
+
+/* this is home section*/
+
+.home{
+    background-image:url(background1.webp) ;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+.home-content{
+    position: absolute;
+    width: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 1;
+    
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.home .title{
+    color: #fff;
+    font-size: 50px;
+    text-transform: uppercase;
+    /* position: absolute; */
+   
+}
+.home .home-desc{
+    margin: 20px 0;
+    color: white ;
+    line-height: 1.5;
+    letter-spacing:2px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button{
+    font-family: inherit;
+}
+.btn{
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    color: var(--bg-black);
+    font-size: 14px;
+    margin-right: 2px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s ;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.btn-learn{
+    background: steelblue;
+    color: #fff;
+  
+   
+}
+.hover-opacity:hover{
+    opacity: 0.7;
+
+}
+/* here is the real header section */
+.section-header{
+    text-align: center;
+}
+.section-header .section-title{
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 5px;    
+
+}
+
+.section-header .line{
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: royalblue;
+    margin:0 auto  70px auto;
+}
+/* here about section is started */
+.pdy{
+    padding: 120px 0;
+}
+    /* the protfolio is start */
+.porfolio{
+    background: rgba(220, 220, 220, 0.533);
+    padding: 120px 0;
+}
+.porfolio-content{
+    overflow: hidden;
+}
+.portfolio-item {
+    width: 30%;
+    float: left;
+    margin-bottom: 40px;
+    position: relative;
+    padding:16px;
+    
+    
+
+}
+
+
+.portfolio-item:hover .layer-content-title,
+.portfolio-item:hover .layer-content,
+.portfolio-item:hover .layer-content .ctg{
+    top:0;
+}
+.portfolio-item .layer-content{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background: rgba(0,0,0,0.5);
+     opacity:0; 
+    transition:0.5s
+}
+.layer-content:hover{
+    opacity: 1; 
+  
+  
+}
+.portfolio-item.mg{
+    margin: 0 5%;
+}
+.portfolio-item img{
+    width: 100%;
+}
+
+ .collect{
+   position: absolute;
+   top: 50%;
+   left:50%;
+   width: 70%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   padding: 9px 0;
+   transition:0.5s;
+   
+} 
+
+.collect .ctg{
+    font-size: 18px;
+    color: rgb(57, 11, 206);
+    text-transform: uppercase;
+    display: block;
+    transition:0.5s;
+    transition-delay:0.3s;
+    position:relative;
+    top:19px;
+}
+.layer-content-title{
+    color:white;
+    line-height: 33px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    position:relative;
+    top:19px;
+    transition:0.5s;
+     transition-delay:0.5s;
+    
+}
+.color{
+    background-color: royalblue;
+
+
+}
+/* here portolio is end */
+
+/* offer is started */
+
+.offer{
+    padding:120px 0 ;
+}
+.offer-content{
+    overflow:hidden;
+}
+
+.offer-item{
+    width: 30%;
+    float: left;
+   margin-bottom: 15px;
+    border: 2px solid  rgba(197, 197, 197, 0.533);;
+    padding: 30px 15px 30px 60px;
+    position: relative;
+    
+
+
+
+}
+
+.offer-item::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background:#000;
+    z-index: -1;
+    transition: width 0.5s;
+}
+.offer-item:hover::after{
+    width: 100%;
+    
+}
+.offer-item .icon{
+    position: absolute;
+    left: 21px;
+    top: 25px;
+    color: rgb(12, 222, 237);
+}
+.offer-item.mg{
+    margin: 0 5%;
+}
+.offer-item-title{
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.offer-item:hover .offer-item-title{
+    color: #fff;
+    
+}
+.offer-item-desc{
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    color: #4f4d4d;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* here is the service section is strated */
+
+.service{
+    padding: 120px 0;
+    background: #e8e8ee;
+}
+
+.service-item{
+    width: 50%;
+    float:left; 
+}
+
+.service-item .section-header{
+    text-align: left;
+}
+.service-item .section-header .line{
+    margin:0 0 30px 0;
+}
+
+
+.service-item-desc{
+    padding-right: 20px;
+    color: var(--grayColor);
+    line-height: 1.5;
+    font-size: 17px;
+
+
+}
+
+.service-list{
+    list-style: none;
+    line-height: 2;
+}
+
+.service-list li{
+    margin-bottom: 15px;
+    color: rgb(131, 128, 128);
+}
+.service-list li i{
+    border: 1px solid rgb(0, 247, 255);
+    color: rgb(0, 166, 255);
+    padding:7px 4px;
+    border-radius: 50%;
+}
+.service-item img{
+    width: 100%;
+}
+.service-bollets{
+    list-style: none;
+    text-align: center;
+}
+
+
+.service-bollets li{
+  border-radius:50% ;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: rgb(91, 91, 94);
+    margin: 10PX 5PX;
+    transition: 0.4s;
+}
+.service-item .active{
+    background: royalblue;
+}
+.service-item li:hover{
+    background:royalblue ;
+    border-radius: 15px ;
+    color: var(--bg-black);
+}
+
+
+/* here i'll start another step */
+
+/* section numbers */
+.numbers{
+    position: relative;
+    background: url(background3.webp);
+    height: 300px;
+    background-size:cover ;
+    background-attachment: fixed;
+
+}
+.numbers-items{
+    overflow: hidden;
+    padding: 120px 0;
+}
+
+
+.number-item{
+    width: 25%;
+    float: left;
+    text-align: center;
+   
+}
+
+.number-item .icon{
+    color:rgb(0, 89, 255) ;
+    margin-bottom:15px;
+}
+
+.number-item-title{
+    font-weight: bold;
+    font-size: 25px;
+    color: #fff;
+    /* margin-bottom: 15px; */
+}
+.number-item-text{
+    color: #fff;
+}
+
+/* here is the pricing table */
+.pricing-plans{
+    overflow: hidden;
+   
+}
+
+.pricing-item{
+    position: relative;
+    width: 30%;
+    float: left;
+    padding: 20px 15px ;
+    border: 1px solid #373535;
+    text-align: center;
+}
+
+.pricing-item.mg{
+    margin:0 5% ;
+
+
+}
+
+.pricing-item-text{
+    color: #777;
+    text-transform: uppercase;
+    transition:color .4s;
+    font-size: 17px;
+}
+.pricing-item:hover .pricing-item-text  {
+    color: royalblue;
+}
+.pricing-item-permonth{
+    width: 110px;
+    height: 110px;
+    padding: 20px 0;
+    margin:20px auto;
+   border: 3px solid rgb(0, 72, 255);
+    border-radius: 50%;
+    transition: color .4s;
+}
+.pricing-item:hover .pricing-item-permonth{
+    color: #fff;
+}
+.pricing-item-permonth .dollar{
+    font-size: 40px;
+}
+.pricing-item-permonth .month{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+.pricing-list{
+    list-style: none;
+
+}
+
+.pricing-list li{
+    margin-bottom: 10px;
+    color: rgb(82, 78, 78);
+}
+.pricing-item-purchase{
+    background: none;
+    border: none;
+    border: 1.5px solid rgb(14, 80, 223) ;
+    display: block;
+    width: 120px;
+    padding: 10px;
+    margin:15px auto 0 auto;
+    color: rgb(14, 80, 223) ;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.pricing-item:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition:  .4s;
+    z-index: -1;
+    background: rgb(0, 0, 0);
+}
+.pricing-item:hover::after{
+    height: 100%;
+}
+
+/* here is the testmonail */
+
+.list-monail{
+    position: relative;
+    background: url(background3.webp);
+    height: 400px;
+    background-attachment: fixed;
+   
+    /* background-position: bottom; */
+}
+.list-monail-content{
+   overflow: hidden;
+    padding: 120px 0;
+   
+}
+.list-monail-item{
+    width: 50%;
+    float: left;
+    color: rgb(255, 255, 255);
+}
+.list-monail-item .list-monail-toplayer{
+    padding: 10px 2px 40px 100px;
+    position: relative;
+    line-height: 1.5;
+}   
+.list-monail-item .list-monail-toplayer img{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 50%;
+}
+
+.list-monail-item .list-monail-toplayer span{
+    color: rgb(0, 81, 255);
+    text-transform: uppercase;
+}
+
+.ul{
+    list-style: none;
+}
+.list-monail-desc{
+    line-height: 1.4;
+    font-size: 15px;
+}
+
+/* here is the our team */
+
+.team-content{
+    overflow: hidden;
+}
+
+.team-item{
+    width: 30%;
+    float: left;
+    /* background: #e8e8e8; */
+    padding: 40px 10px;
+    text-align: center;
+    position: relative;
+  transition: .4s;
+}
+
+.team-item:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background: #222;
+    z-index: -1;
+    transition: .4s;
+}
+.team-item:hover::after{
+    height: 100%;
+}
+.team-item .team-img{
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+.team-item .team-img img{
+    width: 100%;
+    z-index: 1;
+}
+
+.team-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0,0.5);
+    opacity: 0;
+    visibility: visible;/*if you don't use visibilty you still able to click on the icons */
+    transition: .4s;
+    /* z-index: ; */
+}
+.team-item:hover .team-overlay{
+    opacity: 1;
+}
+.team-overlay a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: royalblue;
+    color: #fff;
+    font-size:27px ;
+    margin-left: auto;
+}
+.team-overlay a i {
+    line-height: 40px;
+}
+.team-overlay a i:hover{
+    box-shadow: rgb(0, 0, 0) 2px 2px 7px;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+}
+
+
+.team-item .team-info-title{
+    color: #222;
+    margin: 10px 0;   
+    transition: .4s;
+}
+.team-item:hover .team-info-title{
+    color: #fff;
+}
+
+.team-item .team-info-desc{
+    color: rgb(99, 98, 98);
+    text-transform: uppercase;
+    /* font-weight: 600; */
+    transition: .4s;
+}
+.team-item:hover .team-info-desc{
+    color: royalblue;
+}
+.team-item.mg{
+    margin: 0 5%;
+}
+
+/* here is the blog section is just started */
+
+
+.holderbb{
+    background: #fff;
+}
+
+
+.blog-content{
+    overflow: hidden;
+}
+
+.blog-item{
+    width: 30%;
+    float: left;
+    background: #b8b3b3;
+}
+.blog-item-img img{
+    width: 100%;
+}
+.blog-list{
+    list-style: none;
+    margin: 10px 0;
+    margin-top: -13px;
+}
+
+.blog-list li{
+    display: inline-block;
+    margin:  7px;
+
+}
+.blog-list li i{
+    color: royalblue;
+}
+.info{
+    padding: 20px;
+}
+
+.blog-title{
+    font-weight: bold;
+    margin: 20px 0; 
+ 
+}
+
+
+.blog-desc{
+    color: rgb(90, 87, 87);
+    line-height: 1.5;
+
+}
+
+.blog-link{
+    text-decoration: none;
+    color:royalblue;
+
+}
+.blog-item.mg{
+    margin: 0 5%;
+}
+/* touch section */
+
+.about{
+    background: #fff;
+    margin-top: 20px;
+}
+
+
+.contact-case{
+    overflow: hidden;
+}
+.contact-items{
+    width: 30%;
+    float: left;
+    text-align: center;
+}
+
+.contact-items i{
+    color: royalblue;
+    font-size: 26px;
+    margin: 20px 0;
+}
+.contact-items.mg{
+    margin: 0 5%;
+}
+.phone{
+    margin:0 0 14px 0;
+
+}
+.num{
+    
+    font-weight:500;
+    color: #333;
+    font-size: 18px;
+}
+
+.inputs{
+    margin: auto;
+    width: 74%;
+    margin-left: 166px;
+}
+
+.first{
+    margin-bottom:15px ;
+}
+input[ placeholder="Name"]{
+    margin-top: 40px;
+     width: 45%;
+     height: 30px;
+     outline: none;
+     padding-left: 10px;
+     font-size: 15px;
+     border: none;
+     background: rgb(223, 219, 219);
+     box-shadow: rgba(0, 0, 0,0.5) 2px 2px 4px;
+}
+input[placeholder="Email"]{
+    margin: 40px 2px 0 6px;
+    width: 47%;
+    height: 30px;
+    font-size: 15px;
+    outline: none;padding-left: 10px;
+    background: rgb(223, 219, 219);
+    border: none;
+    box-shadow: rgba(0, 0, 0,0.5) 2px 2px 4px;
+}
+
+input[placeholder="subject"]{
+    width: 787px;
+    margin-bottom:15px ;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    background: rgb(223, 219, 219);
+    box-shadow: rgba(0, 0, 0,0.5) 2px 2px 4px;
+}
+
+textarea[placeholder="Message"]{
+    padding-left: 10px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    background: rgb(223, 219, 219);
+    box-shadow: rgba(0, 0, 0,0.5) 2px 2px 4px;
+    margin-bottom: 15px;
+}
+
+
+.send{
+    width: 170px;
+    height: 40px;
+    margin: auto;
+    color: #fff;
+    font-size:17px ;
+    background: royalblue;
+    margin-left:300px ;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: .4s;
+}
+.send:hover{
+    opacity: 0.7;
+}
+
+/* HERE IS THE FOOTER BABY */
+
+.footer{
+    margin-top: 120px;
+    background: rgb(0, 0, 0);
+    height: 300px;
+    text-align:center;
+}
+
+.footer-logo{
+    padding: 60px 0 20px 0;
+    color: #fff;
+
+}
+.footer-logo img{
+    color:#fff;
+}
+
+.scope a{
+    text-decoration: none;
+}
+.scope a i{
+    width: 40px;
+    height: 40px;
+    background: rgb(36, 36, 130);
+    color:#fff;
+    font-size: 20px;
+    line-height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.scope a:hover i {
+    box-shadow: rgba(242, 239, 239, 0.5) 2px 2px 5px;
+    opacity: 0.6;
+}
+.rights{
+    color: #5a5757  ;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 40px;
+}
+
+.creator{
+    color: rgb(30, 30, 145);
+}
